@@ -1,16 +1,16 @@
 package model;
 
 
-;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 
+@Entity
+@Table(name = "libros")
 public class Book {
 
     @Id
@@ -116,13 +116,6 @@ public class Book {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
-    @Override
-    public String toString() {
-        return "Book [id=" + id + ", nombre=" + nombre + ", autor=" + autor + ", editorial=" + editorial + ", paginas="
-                + paginas + ", genero=" + genero + ", precio=" + precio + "]";
-    }
-
 
 
 }
